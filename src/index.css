@@ -33,4 +33,18 @@
     padding: 12px !important; 
   }
   
+  @keyframes backgroundImages {
+    0% { background-image: url('./src/assets/popular1.jpg'); }
+    20% { background-image: url('./src/assets/popular2.jpg'); }
+    40% { background-image: url('./src/assets/popular3.jpg'); }
+    60% { background-image: url('./src/assets/popular4.jpg'); }
+    80% { background-image: url('./src/assets/popular5.jpg'); }
+    100% { background-image: url('./src/assets/popular6.jpg'); }
+  }
+  
+  .animate-backgroundImages {
+    animation: backgroundImages 30s infinite ease-in-out;
+    background-size: cover;
+    background-position: center;
+  }
   
