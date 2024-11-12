@@ -1,8 +1,26 @@
 import React, { useEffect, useState } from 'react'
+// src/components/ImageGallery.js
+import LightGallery from "lightgallery/react";
 
+// Plugins
+import lgThumbnail from "lightgallery/plugins/thumbnail";
+import lgZoom from "lightgallery/plugins/zoom";
+
+// Import LightGallery CSS
+import "lightgallery/css/lightgallery.css";
+import "lightgallery/css/lg-thumbnail.css";
+import "lightgallery/css/lg-zoom.css";
 
 const BookCard = () => {
-  
+  const images = [
+    { id: 1, src: "./src/assets/popular1.jpg", title: "Image 1" },
+    { id: 2, src: "./src/assets/popular2.jpg", title: "Image 2" },
+    { id: 3, src: "./src/assets/popular3.jpg", title: "Image 3" },
+    { id: 4, src: "./src/assets/popular4.jpg", title: "Image 4" },
+    { id: 5, src: "./src/assets/popular5.jpg", title: "Image 5" },
+    { id: 6, src: "./src/assets/popular6.jpg", title: "Image 6" },
+  ];
+
   return (
     <div>
       <section className='py-8'>
@@ -12,8 +30,23 @@ const BookCard = () => {
             <div className="w-full h-96 bg-cover bg-center animate-backgroundImages"></div>
             </div>
             <div className="w-[24%]">
-              <div className="w-full h-full bg-red-500">
-
+              <div className="w-full h-full overflow-hidden">
+              <LightGallery
+        speed={500}
+        plugins={[lgThumbnail, lgZoom]}
+        elementClassNames="custom-gallery"
+      >
+        {images.map((image) => (
+          <a key={image.id} href={image.src} data-lg-size="1406-1390">
+            <img
+              className="img-thumbnail"
+              src={image.src}
+              alt={image.title}
+              style={{ width: "100%"}}
+            />
+          </a>
+        ))}
+      </LightGallery>
               </div>
             </div>
             <div className="w-[25%]">

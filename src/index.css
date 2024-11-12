@@ -48,3 +48,19 @@
     background-position: center;
   }
   
+
+  /* App.css */
+.custom-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.custom-gallery img {
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.custom-gallery img:hover {
+  transform: scale(1.05);
+}
