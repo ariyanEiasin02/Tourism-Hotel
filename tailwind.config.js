@@ -7,17 +7,13 @@ export default {
   theme: {
     extend: {
       keyframes: {
-        backgroundImages: {
-          '0%': { backgroundImage: 'url("https://your-site.netlify.app/assets/popular1.jpg")' },
-          '20%': { backgroundImage: 'url("https://your-site.netlify.app/assets/popular2.jpg")' },
-          '40%': { backgroundImage: 'url("https://your-site.netlify.app/assets/popular3.jpg")' },
-          '60%': { backgroundImage: 'url("https://your-site.netlify.app/assets/popular4.jpg")' },
-          '80%': { backgroundImage: 'url("https://your-site.netlify.app/assets/popular5.jpg")' },
-          '100%': { backgroundImage: 'url("https://your-site.netlify.app/assets/popular6.jpg")' },
+        fadeAnimation: {
+          '0%, 100%': { opacity: '1' },
+          '50%': { opacity: '0.5' },
         },
       },
       animation: {
-        backgroundImages: 'backgroundImages 30s infinite ease-in-out',
+        fadeBackground: 'fadeAnimation 3s infinite ease-in-out',
       },
       maxWidth:{
         "container" : "1200px"

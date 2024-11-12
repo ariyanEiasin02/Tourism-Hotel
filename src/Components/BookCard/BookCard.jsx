@@ -26,32 +26,48 @@ const BookCard = () => {
     { id: 6, src: img6, title: "Image 6" },
   ];
 
+  const imaggeAnimation = [img1, img2, img3, img4, img5, img6];
+
+  useEffect(() => {
+    const element = document.getElementById('animated-background');
+    let index = 0;
+
+    const interval = setInterval(() => {
+      element.style.backgroundImage = `url(${imaggeAnimation[index]})`;
+      index = (index + 1) % imaggeAnimation.length;
+    }, 3000);
+
+    return () => clearInterval(interval);
+  }, []);
   return (
     <div>
       <section className='py-8'>
         <div className="max-w-container mx-auto">
           <div className="flex h-96">
             <div className="w-[25%]">
-            <div className="w-full h-96 bg-cover bg-center animate-backgroundImages"></div>
+              <div
+                id="animated-background"
+                className="w-full h-96 animate-backgroundImages bg-cover bg-center"
+              />
             </div>
-            <div className="w-[24%]">
+            <div className="w-[25%]">
               <div className="w-full h-full overflow-hidden">
-              <LightGallery
-        speed={500}
-        plugins={[lgThumbnail, lgZoom]}
-        elementClassNames="custom-gallery"
-      >
-        {images.map((image) => (
-          <a key={image.id} href={image.src} data-lg-size="1406-1390">
-            <img
-              className="img-thumbnail"
-              src={image.src}
-              alt={image.title}
-              style={{ width: "100%"}}
-            />
-          </a>
-        ))}
-      </LightGallery>
+                <LightGallery
+                  speed={500}
+                  plugins={[lgThumbnail, lgZoom]}
+                  elementClassNames="custom-gallery"
+                >
+                  {images.map((image) => (
+                    <a key={image.id} href={image.src} data-lg-size="1406-1390">
+                      <img
+                        className="img-thumbnail"
+                        src={image.src}
+                        alt={image.title}
+                        style={{ width: "100%" }}
+                      />
+                    </a>
+                  ))}
+                </LightGallery>
               </div>
             </div>
             <div className="w-[25%]">
@@ -67,11 +83,22 @@ const BookCard = () => {
 
             </div>
             <div className="w-[26%]">
-              <div className="bg-[#f0f0f0] w-full h-96"></div>
+              <div className="bg-[#f0f0f0] w-full h-96 p-4">
+                <h3 className='font-playfair font-bold text-xl text-[#333]'>Checking Details:</h3>
+                <p className='font-playfair font-medium text-base text-[#333] py-1'>Check In:</p>
+                <p className='font-playfair font-medium text-base text-[#333] py-1'>Check Out:</p>
+                <p className='font-playfair font-medium text-base text-[#333] py-1'>#Of Room:</p>
+                <p className='font-playfair font-medium text-base text-[#333] py-1'>#Of Nights:</p>
+                <p className='font-playfair font-medium text-base text-[#333] py-1'>#Total Amount:</p>
+                <p className='font-playfair font-medium text-base text-[#333] py-1'>Meal Plan:</p>
+                <h3 className='font-playfair font-bold text-xl text-[#333] py-2'>Hotel Conditions:</h3>
+                <p className='font-playfair font-medium text-base text-[#333] py-1'>Check-in:From 16:00</p>
+                <p className='font-playfair font-medium text-base text-[#333] py-1'>Check-out:Untill 12:00</p>
+              </div>
             </div>
           </div>
 
-         
+
         </div>
       </section>
     </div>
