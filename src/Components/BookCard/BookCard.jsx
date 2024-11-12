@@ -10,15 +10,20 @@ import lgZoom from "lightgallery/plugins/zoom";
 import "lightgallery/css/lightgallery.css";
 import "lightgallery/css/lg-thumbnail.css";
 import "lightgallery/css/lg-zoom.css";
-
+import img1 from '../../assets/popular1.jpg'
+import img2 from '../../assets/popular2.jpg'
+import img3 from '../../assets/popular3.jpg'
+import img4 from '../../assets/popular4.jpg'
+import img5 from '../../assets/popular5.jpg'
+import img6 from '../../assets/popular6.jpg'
 const BookCard = () => {
   const images = [
-    { id: 1, src: "./src/assets/popular1.jpg", title: "Image 1" },
-    { id: 2, src: "./src/assets/popular2.jpg", title: "Image 2" },
-    { id: 3, src: "./src/assets/popular3.jpg", title: "Image 3" },
-    { id: 4, src: "./src/assets/popular4.jpg", title: "Image 4" },
-    { id: 5, src: "./src/assets/popular5.jpg", title: "Image 5" },
-    { id: 6, src: "./src/assets/popular6.jpg", title: "Image 6" },
+    { id: 1, src: img1, title: "Image 1" },
+    { id: 2, src: img2, title: "Image 2" },
+    { id: 3, src: img3, title: "Image 3" },
+    { id: 4, src: img4, title: "Image 4" },
+    { id: 5, src: img5, title: "Image 5" },
+    { id: 6, src: img6, title: "Image 6" },
   ];
 
   return (
