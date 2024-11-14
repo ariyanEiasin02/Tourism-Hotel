@@ -16,6 +16,7 @@ import img3 from '../../assets/popular3.jpg'
 import img4 from '../../assets/popular4.jpg'
 import img5 from '../../assets/popular5.jpg'
 import img6 from '../../assets/popular6.jpg'
+import { IoLocation } from 'react-icons/io5';
 const BookCard = () => {
   const images = [
     { id: 1, src: img1, title: "Image 1" },
@@ -53,8 +54,20 @@ const BookCard = () => {
   }, []);
   return (
     <div>
-      <section className='py-8'>
+      <section className='py-5'>
         <div className="max-w-container mx-auto">
+          <div className="pb-5">
+            <h2 className='font-playfair font-bold text-2xl text-[#333]'>Domki Wierszyki Shelters</h2>
+            <div className="flex items-start py-2">
+              <div className="">
+                <i className='text-2xl text-[#006CE4]'><IoLocation /></i>
+              </div>
+              <div className="pl-1">
+                <p className='font-playfair font-medium text-base text-[#333]'>Droga do Wantuli 10, 34-500 Zakopane, Poland
+                <span className='text-[#006CE4] font-semibold'>–Excellent location - show map</span></p>
+              </div>
+            </div>
+          </div>
           <div className="flex h-96">
             <div className="w-[25%]">
               <div
@@ -112,8 +125,6 @@ const BookCard = () => {
               </div>
             </div>
           </div>
-
-
         </div>
       </section>
     </div>
