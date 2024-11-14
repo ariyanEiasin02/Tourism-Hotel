@@ -2,7 +2,7 @@ import React from 'react'
 
 const BookNavbar = () => {
   return (
-    <div className='mt-8'>
+    <div className=''>
         <div className="max-w-container mx-auto">
             <nav className='border-b-2'>
                 <ul className='flex justify-between'>

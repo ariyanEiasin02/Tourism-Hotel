@@ -82,7 +82,7 @@ const BookCard = () => {
               </div>
 
             </div>
-            <div className="w-[26%]">
+            <div className="w-[25%]">
               <div className="bg-[#f0f0f0] w-full h-96 p-4">
                 <h3 className='font-playfair font-bold text-xl text-[#333]'>Checking Details:</h3>
                 <p className='font-playfair font-medium text-base text-[#333] py-1'>Check In:</p>

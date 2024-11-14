@@ -3,11 +3,13 @@ import BookBanner from '../../Components/BookBanner/BookBanner'
 import BookNavbar from '../../Components/BookNavabr/BookNavbar'
 import BookCard from '../../Components/BookCard/BookCard'
 import Facilities from '../../Components/Facilities/Facilities'
+import BookNowNavbar from '../../Components/BookNowNavbar/BookNowNavbar'
 
 const BookNow = () => {
   return (
     <>
         <BookBanner/>
+        <BookNowNavbar/>
         <BookNavbar/>
         <BookCard/>
         <Facilities/>
