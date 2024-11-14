@@ -48,3 +48,6 @@
 .custom-gallery img:hover {
   transform: scale(1.05);
 }
+.lg-download{
+  display: none;
+}

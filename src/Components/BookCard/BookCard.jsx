@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 // src/components/ImageGallery.js
 import LightGallery from "lightgallery/react";
 
@@ -39,6 +39,18 @@ const BookCard = () => {
 
     return () => clearInterval(interval);
   }, []);
+
+  const galleryRef = useRef(null);
+  useEffect(() => {
+    const interval = setInterval(() => {
+      if (galleryRef.current) {
+        const galleryInstance = galleryRef.current.instance;
+        galleryInstance.goToNextSlide();
+      }
+    }, 3000);
+
+    return () => clearInterval(interval);
+  }, []);
   return (
     <div>
       <section className='py-8'>
@@ -53,17 +65,20 @@ const BookCard = () => {
             <div className="w-[25%]">
               <div className="w-full h-full overflow-hidden">
                 <LightGallery
-                  speed={500}
+                  onInit={(detail) => (galleryRef.current = detail)}
                   plugins={[lgThumbnail, lgZoom]}
-                  elementClassNames="custom-gallery"
+                  speed={500}
                 >
                   {images.map((image) => (
-                    <a key={image.id} href={image.src} data-lg-size="1406-1390">
+                    <a
+                      key={image.id}
+                      href={image.src}
+                      className="block w-full transition-transform duration-300 hover:scale-105"
+                    >
                       <img
-                        className="img-thumbnail"
                         src={image.src}
                         alt={image.title}
-                        style={{ width: "100%" }}
+                        className="shadow-md w-full object-cover"
                       />
                     </a>
                   ))}
