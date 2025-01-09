@@ -54,7 +54,7 @@ const Navbar = () => {
                             <div className="mt-1 md:mt-0 relative rounded-full cursor-pointer">
                                 <div class="flex items-center border border-gray-300 rounded-md overflow-hidden">
                                     <input
-                                        type="text"
+                                        type="search"
                                         className="w-full py-1 px-3 text-gray-700 
                                         font-playfair
                                         font-normal

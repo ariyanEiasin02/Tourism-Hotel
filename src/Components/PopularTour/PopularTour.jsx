@@ -11,7 +11,7 @@ import { MdArrowForward } from "react-icons/md";
 
 const PopularTour = () => {
   const settings = {
-    dots: true,
+    dots: false,
     infinite: true,
     speed: 500,
     prevArrow: <PreviousArrow />,  
@@ -42,24 +42,63 @@ const PopularTour = () => {
     ],
   };
 
+  const popularItem = [
+    {
+      popularImages : popular1,
+      popularTitle :"Stay Smart at Boss Suites",
+      popularPrice: 980,
+      popularDay : 7,
+    },
+    {
+      popularImages : popular2,
+      popularTitle :"Comfort Meets Style",
+      popularPrice: 750,
+      popularDay : 5,
+    },
+    {
+      popularImages : popular3,
+      popularTitle :"Relax in Nana’s Heart",
+      popularPrice: 1250,
+      popularDay : 10,
+    },
+    {
+      popularImages : popular4,
+      popularTitle :"Luxury You Deserve",
+      popularPrice: 550,
+      popularDay : 3,
+    },
+    {
+      popularImages : popular5,
+      popularTitle :"Your Home in Bangkok",
+      popularPrice: 999,
+      popularDay : 7,
+    },
+    {
+      popularImages : popular6,
+      popularTitle :"Discover Boss Suites",
+      popularPrice: 850,
+      popularDay : 5,
+    },
+  ]
   return (
     <div className='bg-[#E9F7FA] py-8 relative'>
       <div className="max-w-container mx-auto my-8">
         <div className="">
             <div className="">
-              <span className='font-playfair font-medium text-xl text-[#FCC703] py-2'>Best Place For You</span>
-              <h2 className='py-2 font-playfair font-bold text-5xl text-[#333]'>Most  <span className='text-[#199E9D]'>Popular Tour</span></h2>
+              <span className='font-playfair font-semibold text-xl text-[#FCC703] py-2'>Top Pick</span>
+              <h2 className='py-2 font-playfair font-bold text-5xl text-[#333]'>Most  <span className='text-[#199E9D]'>Tour Packages</span></h2>
               <p className='font-playfair font-light text-[#333] text-base py-2 w-[45%]'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
             </div>
         </div>
         <div className="mt-6">
-        <Slider {...settings} className='bg-white'>
-          
-            <div className="w-[24%] p-2">
-            <div className="group bg-white shadow-lg rounded-lg border border-[#6E7070]">
+        <Slider {...settings} className='bg-[#E9F7FA]'>
+          {
+            popularItem.map((popular)=>(
+              <div className="w-[24%] p-2">
+            <div className="group bg-white relative shadow rounded-lg after:content-[''] after:w-0 after:h-[3px] after:bg-[#199E9D] after:absolute after:bottom-0 after:left-0 after:duration-300 after:hover:w-full">
             <div className="relative overflow-hidden">
                 <img
-                  src={popular1}
+                  src={popular.popularImages}
                   alt="Piazza Castello"
                   className="w-full h-64 object-cover duration-700 ease-in-out group-hover:scale-125"
                 />
@@ -68,7 +107,7 @@ const PopularTour = () => {
                 <div className="p-4">
                   <div className="">
                     <div className="">
-                      <h3 className="text-xl font-semibold">Boss Suites Nana Hotel</h3>
+                      <h3 className="text-xl font-semibold">{popular.popularTitle}</h3>
                       <div className="flex mt-1 gap-x-2 items-center">
                         <div className="flex gap-x-1">
                             <i><IoIosStar  className='text-base text-[#FF833F]' /></i>
@@ -83,12 +122,12 @@ const PopularTour = () => {
                       </div>
                     </div>
                     <div className="">
-                      <h2 className='font-playfair font-medium text-xl text-[#333]'>$980.00/<span className='text-base'>Person</span></h2>
+                      <h2 className='font-playfair font-medium text-xl text-[#333]'>${popular.popularPrice}/<span className='text-sm'>Person</span></h2>
                     </div>
                     <div className="mt-5 flex justify-between items-center">
                         <div className="flex items-center">
                             <i className='text-base text-[#333]'><IoMdTime/></i>
-                            <span className='ml-1 font-playfair font-medium text-base text-[#333]'>7 Days</span>
+                            <span className='ml-1 font-playfair font-medium text-base text-[#333]'>{popular.popularDay} Days</span>
                         </div>
                         <div className="">
                         <button className='rounded-full border border-[#FF833F] w-full py-2 px-7 font-poppins font-medium text-[#333] text-base'>Book Now <MdArrowForward className='inline-block' /></button>
@@ -98,221 +137,8 @@ const PopularTour = () => {
                 </div>
                 </div>
             </div>
-            <div className="w-[24%] p-2">
-            <div className="group bg-white shadow-lg rounded-lg border border-[#6E7070]">
-            <div className="relative overflow-hidden">
-                <img
-                  src={popular2}
-                  alt="Piazza Castello"
-                  className="w-full h-64 object-cover duration-700 ease-in-out group-hover:scale-125"
-                />
-                <div className="absolute bottom-0 left-0 h-0 w-full bg-overlay opacity-30 group-hover:h-full duration-700"></div>
-                </div>
-                <div className="p-4">
-                  <div className="">
-                    <div className="">
-                      <h3 className="text-xl font-semibold">Boss Suites Nana Hotel</h3>
-                      <div className="flex mt-1 gap-x-2 items-center">
-                        <div className="flex gap-x-1">
-                            <i><IoIosStar  className='text-base text-[#FF833F]' /></i>
-                            <i><IoIosStar  className='text-base text-[#FF833F]' /></i>
-                            <i><IoIosStar  className='text-base text-[#FF833F]' /></i>
-                            <i><IoIosStar  className='text-base text-[#FF833F]' /></i>
-                            <i><IoIosStar  className='text-base text-[#FF833F]' /></i>
-                        </div>
-                        <div className="">
-                        <p className='font-playfair font-medium text-base text-[#333]'>(4.8 rating)</p>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="">
-                      <h2 className='font-playfair font-medium text-xl text-[#333]'>$980.00/<span className='text-base'>Person</span></h2>
-                    </div>
-                    <div className="mt-5 flex justify-between items-center">
-                        <div className="flex items-center">
-                            <i className='text-base text-[#333]'><IoMdTime/></i>
-                            <span className='ml-1 font-playfair font-medium text-base text-[#333]'>7 Days</span>
-                        </div>
-                        <div className="">
-                        <button className='rounded-full border border-[#FF833F] w-full py-2 px-7 font-poppins font-medium text-[#333] text-base'>Book Now <MdArrowForward className='inline-block' /></button>
-                        </div>
-                    </div>
-                  </div>
-                </div>
-                </div>
-            </div>
-            <div className="w-[24%] p-2">
-            <div className="group bg-white shadow-lg rounded-lg border border-[#6E7070]">
-            <div className="relative overflow-hidden">
-                <img
-                  src={popular3}
-                  alt="Piazza Castello"
-                  className="w-full h-64 object-cover duration-700 ease-in-out group-hover:scale-125"
-                />
-                <div className="absolute bottom-0 left-0 h-0 w-full bg-overlay opacity-30 group-hover:h-full duration-700"></div>
-                </div>
-                <div className="p-4">
-                  <div className="">
-                    <div className="">
-                      <h3 className="text-xl font-semibold">Boss Suites Nana Hotel</h3>
-                      <div className="flex mt-1 gap-x-2 items-center">
-                        <div className="flex gap-x-1">
-                            <i><IoIosStar  className='text-base text-[#FF833F]' /></i>
-                            <i><IoIosStar  className='text-base text-[#FF833F]' /></i>
-                            <i><IoIosStar  className='text-base text-[#FF833F]' /></i>
-                            <i><IoIosStar  className='text-base text-[#FF833F]' /></i>
-                            <i><IoIosStar  className='text-base text-[#FF833F]' /></i>
-                        </div>
-                        <div className="">
-                        <p className='font-playfair font-medium text-base text-[#333]'>(4.8 rating)</p>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="">
-                      <h2 className='font-playfair font-medium text-xl text-[#333]'>$980.00/<span className='text-base'>Person</span></h2>
-                    </div>
-                    <div className="mt-5 flex justify-between items-center">
-                        <div className="flex items-center">
-                            <i className='text-base text-[#333]'><IoMdTime/></i>
-                            <span className='ml-1 font-playfair font-medium text-base text-[#333]'>7 Days</span>
-                        </div>
-                        <div className="">
-                        <button className='rounded-full border border-[#FF833F] w-full py-2 px-7 font-poppins font-medium text-[#333] text-base'>Book Now <MdArrowForward className='inline-block' /></button>
-                        </div>
-                    </div>
-                  </div>
-                </div>
-                </div>
-            </div>
-            <div className="w-[24%] p-2">
-            <div className="group bg-white shadow-lg rounded-lg border border-[#6E7070]">
-            <div className="relative overflow-hidden">
-                <img
-                  src={popular4}
-                  alt="Piazza Castello"
-                  className="w-full h-64 object-cover duration-700 ease-in-out group-hover:scale-125"
-                />
-                <div className="absolute bottom-0 left-0 h-0 w-full bg-overlay opacity-30 group-hover:h-full duration-700"></div>
-                </div>
-                <div className="p-4">
-                  <div className="">
-                    <div className="">
-                      <h3 className="text-xl font-semibold">Boss Suites Nana Hotel</h3>
-                      <div className="flex mt-1 gap-x-2 items-center">
-                        <div className="flex gap-x-1">
-                            <i><IoIosStar  className='text-base text-[#FF833F]' /></i>
-                            <i><IoIosStar  className='text-base text-[#FF833F]' /></i>
-                            <i><IoIosStar  className='text-base text-[#FF833F]' /></i>
-                            <i><IoIosStar  className='text-base text-[#FF833F]' /></i>
-                            <i><IoIosStar  className='text-base text-[#FF833F]' /></i>
-                        </div>
-                        <div className="">
-                        <p className='font-playfair font-medium text-base text-[#333]'>(4.8 rating)</p>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="">
-                      <h2 className='font-playfair font-medium text-xl text-[#333]'>$980.00/<span className='text-base'>Person</span></h2>
-                    </div>
-                    <div className="mt-5 flex justify-between items-center">
-                        <div className="flex items-center">
-                            <i className='text-base text-[#333]'><IoMdTime/></i>
-                            <span className='ml-1 font-playfair font-medium text-base text-[#333]'>7 Days</span>
-                        </div>
-                        <div className="">
-                        <button className='rounded-full border border-[#FF833F] w-full py-2 px-7 font-poppins font-medium text-[#333] text-base'>Book Now <MdArrowForward className='inline-block' /></button>
-                        </div>
-                    </div>
-                  </div>
-                </div>
-                </div>
-            </div>
-            <div className="w-[24%] p-2">
-            <div className="group bg-white shadow-lg rounded-lg border border-[#6E7070]">
-            <div className="relative overflow-hidden">
-                <img
-                  src={popular5}
-                  alt="Piazza Castello"
-                  className="w-full h-64 object-cover duration-700 ease-in-out group-hover:scale-125"
-                />
-                <div className="absolute bottom-0 left-0 h-0 w-full bg-overlay opacity-30 group-hover:h-full duration-700"></div>
-                </div>
-                <div className="p-4">
-                  <div className="">
-                    <div className="">
-                      <h3 className="text-xl font-semibold">Boss Suites Nana Hotel</h3>
-                      <div className="flex mt-1 gap-x-2 items-center">
-                        <div className="flex gap-x-1">
-                            <i><IoIosStar  className='text-base text-[#FF833F]' /></i>
-                            <i><IoIosStar  className='text-base text-[#FF833F]' /></i>
-                            <i><IoIosStar  className='text-base text-[#FF833F]' /></i>
-                            <i><IoIosStar  className='text-base text-[#FF833F]' /></i>
-                            <i><IoIosStar  className='text-base text-[#FF833F]' /></i>
-                        </div>
-                        <div className="">
-                        <p className='font-playfair font-medium text-base text-[#333]'>(4.8 rating)</p>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="">
-                      <h2 className='font-playfair font-medium text-xl text-[#333]'>$980.00/<span className='text-base'>Person</span></h2>
-                    </div>
-                    <div className="mt-5 flex justify-between items-center">
-                        <div className="flex items-center">
-                            <i className='text-base text-[#333]'><IoMdTime/></i>
-                            <span className='ml-1 font-playfair font-medium text-base text-[#333]'>7 Days</span>
-                        </div>
-                        <div className="">
-                        <button className='rounded-full border border-[#FF833F] w-full py-2 px-7 font-poppins font-medium text-[#333] text-base'>Book Now <MdArrowForward className='inline-block' /></button>
-                        </div>
-                    </div>
-                  </div>
-                </div>
-                </div>
-            </div>
-            <div className="w-[24%] p-2">
-            <div className="group bg-white shadow-lg rounded-lg border border-[#6E7070]">
-                <div className="relative overflow-hidden">
-                <img
-                  src={popular6}
-                  alt="Piazza Castello"
-                  className="w-full h-64 object-cover duration-700 ease-in-out group-hover:scale-125"
-                />
-                <div className="absolute bottom-0 left-0 h-0 w-full bg-overlay opacity-30 group-hover:h-full duration-700"></div>
-                </div>
-                <div className="p-4">
-                  <div className="">
-                    <div className="">
-                      <h3 className="text-xl font-semibold">Boss Suites Nana Hotel</h3>
-                      <div className="flex mt-1 gap-x-2 items-center">
-                        <div className="flex gap-x-1">
-                            <i><IoIosStar  className='text-base text-[#FF833F]' /></i>
-                            <i><IoIosStar  className='text-base text-[#FF833F]' /></i>
-                            <i><IoIosStar  className='text-base text-[#FF833F]' /></i>
-                            <i><IoIosStar  className='text-base text-[#FF833F]' /></i>
-                            <i><IoIosStar  className='text-base text-[#FF833F]' /></i>
-                        </div>
-                        <div className="">
-                        <p className='font-playfair font-medium text-base text-[#333]'>(4.8 rating)</p>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="">
-                      <h2 className='font-playfair font-medium text-xl text-[#333]'>$980.00/<span className='text-base'>Person</span></h2>
-                    </div>
-                    <div className="mt-5 flex justify-between items-center">
-                        <div className="flex items-center">
-                            <i className='text-base text-[#333]'><IoMdTime/></i>
-                            <span className='ml-1 font-playfair font-medium text-base text-[#333]'>7 Days</span>
-                        </div>
-                        <div className="">
-                        <button className='rounded-full border border-[#FF833F] w-full py-2 px-7 font-poppins font-medium text-[#333] text-base'>Book Now <MdArrowForward className='inline-block' /></button>
-                        </div>
-                    </div>
-                  </div>
-                </div>
-                </div>
-            </div>
+            ))
+          }
         </Slider>
           </div>
       </div>
