@@ -51,3 +51,10 @@
 .lg-download{
   display: none;
 }
+.perspective {
+  perspective: 1000px;
+}
+
+.backface-hidden {
+  backface-visibility: hidden;
+}

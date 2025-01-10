@@ -1,161 +1,139 @@
 import React from 'react';
-import Slider from 'react-slick';
-import popular1 from '../../assets/popular1.jpg'
-import popular2 from '../../assets/popular2.jpg'
-import popular3 from '../../assets/popular3.jpg'
-import popular4 from '../../assets/popular4.jpg'
-import popular5 from '../../assets/popular5.jpg'
-import popular6 from '../../assets/popular6.jpg'
-import { IoIosArrowBack, IoIosArrowForward,IoMdTime,IoIosStar } from "react-icons/io";
-import { MdArrowForward } from "react-icons/md";
+import canada1 from '../../assets/canada1.jpg';
+import france1 from '../../assets/france1.jpg';
+import greece1 from '../../assets/greece1.jpg';
+import india1 from '../../assets/india1.jpg';
+import maldives1 from '../../assets/maldives1.jpg';
+import suadi1 from '../../assets/suadi1.jpg';
+import { MdLocationPin, MdOutlineAccessTime } from 'react-icons/md';
+import { FaRegUser } from 'react-icons/fa';
+import { IoMdHappy } from 'react-icons/io';
 
 const PopularTour = () => {
-  const settings = {
-    dots: false,
-    infinite: true,
-    speed: 500,
-    prevArrow: <PreviousArrow />,  
-    nextArrow: <NextArrow />,
-    slidesToShow: 4, 
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 2000,
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 3,
-        },
-      },
-      {
-        breakpoint: 768,
-        settings: {
-          slidesToShow: 2,
-        },
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          slidesToShow: 1,
-        },
-      },
-    ],
-  };
-
   const popularItem = [
     {
-      popularImages : popular1,
-      popularTitle :"Stay Smart at Boss Suites",
-      popularPrice: 980,
-      popularDay : 7,
+      popularImages: canada1,
+      popularCountry: "Canada",
+      popularTitle: "Canada Tour",
+      popularPrice: 300,
+      popularDescription:
+        "Travel non lorem ac erat susce bibendum nulla facilisi. Sedeuter nunc voluat miss conse viventa amet vestibulum."
     },
     {
-      popularImages : popular2,
-      popularTitle :"Comfort Meets Style",
-      popularPrice: 750,
-      popularDay : 5,
+      popularImages: france1,
+      popularCountry: "France",
+      popularTitle: "France Tour",
+      popularPrice: 600,
+      popularDescription:
+        "Travel non lorem ac erat susce bibendum nulla facilisi. Sedeuter nunc voluat miss conse viventa amet vestibulum."
     },
     {
-      popularImages : popular3,
-      popularTitle :"Relax in Nana’s Heart",
-      popularPrice: 1250,
-      popularDay : 10,
+      popularImages: india1,
+      popularCountry: "Australia",
+      popularTitle: "Australia Tour",
+      popularPrice: 2000,
+      popularDescription:
+        "Travel non lorem ac erat susce bibendum nulla facilisi. Sedeuter nunc voluat miss conse viventa amet vestibulum."
     },
     {
-      popularImages : popular4,
-      popularTitle :"Luxury You Deserve",
-      popularPrice: 550,
-      popularDay : 3,
+      popularImages: greece1,
+      popularCountry: "Greece",
+      popularTitle: "Greece Tour",
+      popularPrice: 500,
+      popularDescription:
+        "Travel non lorem ac erat susce bibendum nulla facilisi. Sedeuter nunc voluat miss conse viventa amet vestibulum."
     },
     {
-      popularImages : popular5,
-      popularTitle :"Your Home in Bangkok",
-      popularPrice: 999,
-      popularDay : 7,
+      popularImages: maldives1,
+      popularCountry: "Maldives",
+      popularTitle: "Maldives Tour",
+      popularPrice: 1500,
+      popularDescription:
+        "Travel non lorem ac erat susce bibendum nulla facilisi. Sedeuter nunc voluat miss conse viventa amet vestibulum."
     },
     {
-      popularImages : popular6,
-      popularTitle :"Discover Boss Suites",
-      popularPrice: 850,
-      popularDay : 5,
-    },
-  ]
+      popularImages: suadi1,
+      popularCountry: "Saudi Arabia",
+      popularTitle: "Saudi Arabia Tour",
+      popularPrice: 800,
+      popularDescription:
+        "Travel non lorem ac erat susce bibendum nulla facilisi. Sedeuter nunc voluat miss conse viventa amet vestibulum."
+    }
+  ];
+
   return (
-    <div className='bg-[#E9F7FA] py-8 relative'>
-      <div className="max-w-container mx-auto my-8">
-        <div className="">
-            <div className="">
-              <span className='font-playfair font-semibold text-xl text-[#FCC703] py-2'>Top Pick</span>
-              <h2 className='py-2 font-playfair font-bold text-5xl text-[#333]'>Most  <span className='text-[#199E9D]'>Tour Packages</span></h2>
-              <p className='font-playfair font-light text-[#333] text-base py-2 w-[45%]'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-            </div>
+    <section className="py-8">
+      <div className="max-w-container mx-auto">
+        <div className="px-4 md:px-0">
+          <span className="font-playfair font-semibold text-xl text-[#FCC703] py-2">
+            Choose your place
+          </span>
+          <h2 className="py-2 font-playfair font-bold md:text-5xl text-2xl text-[#333]">
+            Most <span className="text-[#199E9D]">Popular Tours</span>
+          </h2>
+          <p className="font-playfair font-light text-[#333] md:text-base text-sm md:py-2 md:w-[45%] w-full">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </p>
         </div>
-        <div className="mt-6">
-        <Slider {...settings} className='bg-[#E9F7FA]'>
-          {
-            popularItem.map((popular)=>(
-              <div className="w-[24%] p-2">
-            <div className="group bg-white relative shadow rounded-lg after:content-[''] after:w-0 after:h-[3px] after:bg-[#199E9D] after:absolute after:bottom-0 after:left-0 after:duration-300 after:hover:w-full">
-            <div className="relative overflow-hidden">
-                <img
-                  src={popular.popularImages}
-                  alt="Piazza Castello"
-                  className="w-full h-64 object-cover duration-700 ease-in-out group-hover:scale-125"
-                />
-                <div className="absolute bottom-0 left-0 h-0 w-full bg-overlay opacity-30 group-hover:h-full duration-700"></div>
-                </div>
-                <div className="p-4">
-                  <div className="">
-                    <div className="">
-                      <h3 className="text-xl font-semibold">{popular.popularTitle}</h3>
-                      <div className="flex mt-1 gap-x-2 items-center">
-                        <div className="flex gap-x-1">
-                            <i><IoIosStar  className='text-base text-[#FF833F]' /></i>
-                            <i><IoIosStar  className='text-base text-[#FF833F]' /></i>
-                            <i><IoIosStar  className='text-base text-[#FF833F]' /></i>
-                            <i><IoIosStar  className='text-base text-[#FF833F]' /></i>
-                            <i><IoIosStar  className='text-base text-[#FF833F]' /></i>
-                        </div>
-                        <div className="">
-                        <p className='font-playfair font-medium text-base text-[#333]'>(4.8 rating)</p>
-                        </div>
+        <div className="mt-5">
+          <div className="md:flex justify-between flex-wrap gap-6">
+            {popularItem.map((item, index) => (
+              <div key={index} className="md:w-[32%] mt-5 px-4 md:mt-0 md:px-0">
+                  <div className="relative group">
+                  
+                    <div className="relative">
+                      <img
+                        src={item.popularImages}
+                        alt={item.popularTitle}
+                        className="w-full h-full object-cover rounded-lg"
+                      />
+                      <div className="absolute bottom-5 right-4 flex flex-col text-white">
+                        <h2 className="font-playfair text-2xl font-bold">
+                          {item.popularTitle}
+                        </h2>
+                        <p className="font-playfair mt-1 font-semibold text-[18px] text-[#FCC703]">
+                          ${item.popularPrice}/Per Person
+                        </p>
                       </div>
                     </div>
-                    <div className="">
-                      <h2 className='font-playfair font-medium text-xl text-[#333]'>${popular.popularPrice}/<span className='text-sm'>Person</span></h2>
-                    </div>
-                    <div className="mt-5 flex justify-between items-center">
+
+                    <div className="bg-[#199E9D] text-white p-3 md:p-4 rounded-lg absolute top-0 left-0 h-0 group-hover:h-full w-full opacity-0 group-hover:opacity-100 group-hover:rotate-y-180 duration-700">
+                      <h2 className="font-playfair text-xl md:text-2xl font-bold">{item.popularTitle}</h2>
+                      <p className="font-playfair mt-1 font-semibold text-sm md:text-base text-[#FCC703]">
+                        ${item.popularPrice}/Per Person
+                      </p>
+                      <p className="font-open-sans font-normal mt-1 md:text-sm text-xs">{item.popularDescription}</p>
+                      <div className="grid grid-cols-2 gap-y-1 mt-2">
                         <div className="flex items-center">
-                            <i className='text-base text-[#333]'><IoMdTime/></i>
-                            <span className='ml-1 font-playfair font-medium text-base text-[#333]'>{popular.popularDay} Days</span>
+                            <div className=""><MdOutlineAccessTime /></div>
+                            <div className="font-open-sans font-normal md:text-sm text-xs ml-1">12 Days</div>
                         </div>
-                        <div className="">
-                        <button className='rounded-full border border-[#FF833F] w-full py-2 px-7 font-poppins font-medium text-[#333] text-base'>Book Now <MdArrowForward className='inline-block' /></button>
+                        <div className="flex items-center">
+                            <div className=""><MdLocationPin/></div>
+                            <div className="font-open-sans font-normal md:text-sm text-xs ml-1">{item.popularCountry}</div>
                         </div>
+                        <div className="flex items-center">
+                            <div className=""><FaRegUser/></div>
+                            <div className="font-open-sans font-normal md:text-sm text-xs ml-1">12+</div>
+                        </div>
+                        <div className="flex items-center">
+                            <div className=""><IoMdHappy/></div>
+                            <div className="font-open-sans font-normal md:text-sm text-xs ml-1">9.5 Superb</div>
+                        </div>
+                      </div>
+                      <button class="py-1 mt-2 md:mt-1 text-white text-base md:text-[18px] font-semibold border-b-2 border-white  hover:border-blue-700 transition duration-300">
+                        Tour details
+                    </button>
                     </div>
                   </div>
                 </div>
-                </div>
-            </div>
-            ))
-          }
-        </Slider>
+            ))}
           </div>
+        </div>
       </div>
-    </div>
+    </section>
   );
 };
 
-
-const PreviousArrow = ({ onClick }) => {
-  return (
-    <button onClick={onClick} className='absolute -top-28 right-20 py-4 px-4 rounded-md bg-white font-poppins font-bold text-2xl text-black'><IoIosArrowBack/></button>
-  );
-};
-
-const NextArrow = ({onClick }) => {
-  return (
-    <button onClick={onClick} className='absolute -top-28 right-0 py-4 px-4 rounded-md bg-white font-poppins font-bold text-2xl text-black'><IoIosArrowForward/></button>
-  );
-};
 export default PopularTour;
