@@ -5,6 +5,7 @@ import TourPackage from '../../Components/TourPackage/TourPackage'
 import Tours from '../../Components/Tours/Tours'
 import Header from '../../Components/Header/Header'
 import PopularTour from '../../Components/PopularTour/PopularTour'
+import ExploreHotes from '../../Components/ExploreHotes/ExploreHotes'
 
 const Home = () => {
     return (
@@ -14,6 +15,7 @@ const Home = () => {
             <Banner />
             <TourPackage />
             <PopularTour/>
+            <ExploreHotes/>
             <Tours />
         </>
     )
