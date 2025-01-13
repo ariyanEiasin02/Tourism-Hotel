@@ -24,7 +24,7 @@ export default {
       },
       backgroundImage:{
         "overlay" : 'linear-gradient(to bottom, transparent, #000000);',
-        "rgbaColor" :'linear-gradient(to bottom, #000, #FF0000)'
+        'rgbaColor': 'linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6))',
       },
       letterSpacing:{
         "ex-tracking-widest" : "2rem"

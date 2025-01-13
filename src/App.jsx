@@ -7,11 +7,13 @@ import Home from "./Pages/Home/Home";
 import About from "./Pages/About/About";
 import Contact from "./Pages/Contact/Contact";
 import BookNow from "./Pages/BookNow/BookNow";
+import BackToTop from './Components/BackToTop/BackToTop';
 function App() {
  
   return (
     <>
       <Router>
+        <BackToTop/>
     <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
