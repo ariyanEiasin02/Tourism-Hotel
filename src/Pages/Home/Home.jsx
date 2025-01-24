@@ -11,8 +11,6 @@ import ActivitiesTab from '../../Components/ActivitiesTab/ActivitiesTab'
 const Home = () => {
     return (
         <>
-            <Header/>
-            <Navbar />
             <Banner />
             <TourPackage />
             <PopularTour/>

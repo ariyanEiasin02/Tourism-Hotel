@@ -1,6 +1,7 @@
 import React, { useContext, useEffect, useState } from 'react';
 import logo from '../../assets/logo.png';
 import { IoClose, IoMenu, IoSearch } from 'react-icons/io5';
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
     const [menuShow, setMenuShow] = useState(false);
@@ -18,9 +19,9 @@ const Navbar = () => {
                 <div className="max-w-container mx-auto px-4 md:px-0">
                     <div className="flex justify-between items-center">
                         <div className="">
-                            <a to="/">
+                            <Link to="/booknow">
                                 <img src={logo} alt="Logo" className='w-12 h-auto' />
-                            </a>
+                            </Link>
                         </div>
                         <div className="relative flex items-center gap-x-16">
                             <div className="">

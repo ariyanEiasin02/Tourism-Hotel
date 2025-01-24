@@ -8,12 +8,16 @@ import About from "./Pages/About/About";
 import Contact from "./Pages/Contact/Contact";
 import BookNow from "./Pages/BookNow/BookNow";
 import BackToTop from './Components/BackToTop/BackToTop';
+import Navbar from './Components/Navbar/Navbar';
+import Header from './Components/Header/Header';
 function App() {
  
   return (
     <>
       <Router>
         <BackToTop/>
+        <Header/>
+        <Navbar/>
     <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
