@@ -19,16 +19,16 @@ const Navbar = () => {
                 <div className="max-w-container mx-auto px-4 md:px-0">
                     <div className="flex justify-between items-center">
                         <div className="">
-                            <Link to="/booknow">
+                            <Link to="/">
                                 <img src={logo} alt="Logo" className='w-12 h-auto' />
                             </Link>
                         </div>
                         <div className="relative flex items-center gap-x-16">
                             <div className="">
                             <ul className={`hidden md:flex gap-x-6 font-playfair font-semibold text-base text-primary`}>
-                                <a to='/'>
+                                <Link to='/'>
                                     <li className={`${scroll ? "text-white hover:text-[#FCC752]" : "text-black hover:text-[#20A9A9]"}  cursor-pointer`}>Home</li>
-                                </a>
+                                </Link>
                                 <a to="/Home/About">
                                     <li className={`${scroll ? "text-white hover:text-[#FCC752]" : "text-black hover:text-[#20A9A9]"}  cursor-pointer`}>
                                     Hotes

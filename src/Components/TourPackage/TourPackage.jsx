@@ -8,6 +8,7 @@ import popular5 from '../../assets/popular5.jpg'
 import popular6 from '../../assets/popular6.jpg'
 import { IoIosArrowBack, IoIosArrowForward,IoMdTime,IoIosStar } from "react-icons/io";
 import { MdArrowForward } from "react-icons/md";
+import { Link } from 'react-router-dom';
 
 const TourPackage = () => {
   const settings = {
@@ -89,6 +90,7 @@ const TourPackage = () => {
           {
             TourItem.map((popular)=>(
               <div className="w-[24%] p-2 md:mt-0 mt-12">
+                <Link to="/booknow">
             <div className="group bg-white relative shadow rounded-lg after:content-[''] after:w-0 after:h-[3px] after:bg-[#199E9D] after:absolute after:bottom-0 after:left-0 after:duration-300 after:hover:w-full">
             <div className="relative overflow-hidden">
                 <img
@@ -130,6 +132,7 @@ const TourPackage = () => {
                   </div>
                 </div>
                 </div>
+                </Link>
             </div>
             ))
           }

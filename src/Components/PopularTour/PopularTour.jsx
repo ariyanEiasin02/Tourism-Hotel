@@ -8,6 +8,7 @@ import suadi1 from '../../assets/suadi1.jpg';
 import { MdLocationPin, MdOutlineAccessTime } from 'react-icons/md';
 import { FaRegUser } from 'react-icons/fa';
 import { IoMdHappy } from 'react-icons/io';
+import { Link } from 'react-router-dom';
 
 const PopularTour = () => {
   const popularItem = [
@@ -123,7 +124,9 @@ const PopularTour = () => {
                         </div>
                       </div>
                       <button class="py-1 mt-2 md:mt-1 text-white text-base md:text-[18px] font-semibold border-b-2 border-white  hover:border-blue-700 transition duration-300">
+                        <Link to="/booknow">
                         Tour details
+                        </Link>
                     </button>
                     </div>
                   </div>
