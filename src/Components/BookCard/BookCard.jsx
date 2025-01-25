@@ -64,7 +64,7 @@ const BookCard = () => {
               </div>
               <div className="pl-1">
                 <p className='font-playfair font-medium text-base text-[#333]'>Droga do Wantuli 10, 34-500 Zakopane, Poland
-                <span className='text-[#006CE4] font-semibold'>–Excellent location - show map</span></p>
+                  <span className='text-[#006CE4] font-semibold'>–Excellent location - show map</span></p>
               </div>
             </div>
           </div>
@@ -111,19 +111,52 @@ const BookCard = () => {
 
             </div>
             <div className="w-[25%]">
-              <div className="bg-[#f0f0f0] w-full h-96 p-4">
-                <h3 className='font-playfair font-bold text-xl text-[#333]'>Checking Details:</h3>
-                <p className='font-playfair font-medium text-base text-[#333] py-1'>Check In:</p>
-                <p className='font-playfair font-medium text-base text-[#333] py-1'>Check Out:</p>
-                <p className='font-playfair font-medium text-base text-[#333] py-1'>#Of Room:</p>
-                <p className='font-playfair font-medium text-base text-[#333] py-1'>#Of Nights:</p>
-                <p className='font-playfair font-medium text-base text-[#333] py-1'>#Total Amount:</p>
-                <p className='font-playfair font-medium text-base text-[#333] py-1'>Meal Plan:</p>
-                <h3 className='font-playfair font-bold text-xl text-[#333] py-2'>Hotel Conditions:</h3>
-                <p className='font-playfair font-medium text-base text-[#333] py-1'>Check-in:From 16:00</p>
-                <p className='font-playfair font-medium text-base text-[#333] py-1'>Check-out:Untill 12:00</p>
+              <div className="bg-white shadow-lg w-full h-96 px-6 overflow-y-auto">
+                <h3 className="font-playfair font-bold text-2xl text-gray-800 mb-4 border-b pb-2">
+                  Checking Details
+                </h3>
+
+                <div className="space-y-2">
+                  <div className="flex justify-between items-center">
+                    <span className="text-gray-600 font-medium">Check-In:</span>
+                    <span className="text-gray-900 font-semibold">From 16:00</span>
+                  </div>
+                  <div className="flex justify-between items-center">
+                    <span className="text-gray-600 font-medium">Check-Out:</span>
+                    <span className="text-gray-900 font-semibold">Until 12:00</span>
+                  </div>
+                  <div className="flex justify-between items-center">
+                    <span className="text-gray-600 font-medium"># of Rooms:</span>
+                    <span className="text-gray-900 font-semibold">2</span>
+                  </div>
+                  <div className="flex justify-between items-center">
+                    <span className="text-gray-600 font-medium"># of Nights:</span>
+                    <span className="text-gray-900 font-semibold">3</span>
+                  </div>
+                  <div className="flex justify-between items-center">
+                    <span className="text-gray-600 font-medium">Total Amount:</span>
+                    <span className="text-green-600 font-semibold">$450</span>
+                  </div>
+                  <div className="flex justify-between items-center">
+                    <span className="text-gray-600 font-medium">Meal Plan:</span>
+                    <span className="text-gray-900 font-semibold">Breakfast</span>
+                  </div>
+                </div>
+
+                {/* Hotel Conditions */}
+                <h3 className="font-playfair font-bold text-2xl text-gray-800 mt-6 mb-4 border-b pb-2">
+                  Hotel Conditions
+                </h3>
+                <ul className="list-disc list-inside text-gray-700 space-y-2">
+                  <li>Check-in: From 16:00</li>
+                  <li>Check-out: Until 12:00</li>
+                  <li>Pets are not allowed</li>
+                  <li>Free cancellation before 48 hours</li>
+                </ul>
               </div>
             </div>
+
+
           </div>
         </div>
       </section>
