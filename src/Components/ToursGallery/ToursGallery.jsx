@@ -6,6 +6,7 @@ import gallery4 from '../../assets/gallery4.jpg'
 import gallery5 from '../../assets/gallery5.jpg'
 import gallery6 from '../../assets/gallery6.jpg'
 import gallery7 from '../../assets/gallery7.jpg'
+import { Link } from 'react-router-dom'
 
 const ToursGallery = () => {
     return (
@@ -32,7 +33,9 @@ const ToursGallery = () => {
                                     <div className="absolute inset-0 flex flex-col items-center justify-center text-center text-white duration-500 ease-in-out">
                                         <h2 className="font-playfair font-bold text-[18px] md:text-2xl mb-2">Small Group Departures</h2>
                                         <button className=" text-white font-semibold hover:border-[#17aba9] border-b-2 duration-700">
-                                            View Tours
+                                           <Link to="/booknow">
+                                           View Tours
+                                           </Link>
                                         </button>
                                     </div>
                                 </div>
@@ -45,7 +48,9 @@ const ToursGallery = () => {
                                     <div className="absolute inset-0 flex flex-col items-center justify-center text-center text-white duration-500 ease-in-out">
                                         <h2 className="font-playfair font-bold text-[16px] md:text-2xl mb-2">	Affordable Dreams</h2>
                                         <button className=" text-white font-semibold hover:border-[#17aba9] border-b-2 duration-700">
-                                            View Tours
+                                        <Link to="/booknow">
+                                           View Tours
+                                        </Link>
                                         </button>
                                     </div>
                                     </div>
@@ -57,7 +62,9 @@ const ToursGallery = () => {
                                         <h2 className="font-playfair font-bold text-base md:text-2xl mb-2">
                                         Undiscovered Tours</h2>
                                         <button className=" text-white font-semibold hover:border-[#17aba9] border-b-2 duration-700">
-                                            View Tours
+                                        <Link to="/booknow">
+                                           View Tours
+                                        </Link>
                                         </button>
                                     </div>
                                     </div>
@@ -72,7 +79,9 @@ const ToursGallery = () => {
                                         <h2 className="font-playfair font-bold text-base md:text-2xl mb-2">
                                         Religious Tours</h2>
                                         <button className=" text-white font-semibold hover:border-[#17aba9] border-b-2 duration-700">
-                                            View Tours
+                                        <Link to="/booknow">
+                                           View Tours
+                                        </Link>
                                         </button>
                                     </div>
                                 </div>
@@ -84,7 +93,9 @@ const ToursGallery = () => {
                                         <h2 className="font-playfair font-bold text-base md:text-2xl mb-2">
                                         Solo Travel</h2>
                                         <button className=" text-white font-semibold hover:border-[#17aba9] border-b-2 duration-700">
-                                            View Tours
+                                        <Link to="/booknow">
+                                           View Tours
+                                        </Link>
                                         </button>
                                     </div>
                                 </div>
@@ -109,7 +120,9 @@ const ToursGallery = () => {
                                         <h2 className="font-playfair font-bold text-xl md:text-2xl mb-2">
                                         Private Touring</h2>
                                         <button className=" text-white font-semibold hover:border-[#17aba9] border-b-2 duration-700">
-                                            View Tours
+                                        <Link to="/booknow">
+                                           View Tours
+                                        </Link>
                                         </button>
                                     </div>
                             </div>

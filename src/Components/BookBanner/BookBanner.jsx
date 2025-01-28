@@ -3,7 +3,9 @@ import aboutBanner from '../../assets/aboutBanner.mp4'
 import CheckInOut from "../check In-Out/CheckInOut";
 const BookBanner = () => {
   return (
-    <div className="relative py-16 bg-cover bg-center">
+   <section className="relative py-16 bg-cover bg-center">
+    <div className="max-w-container mx-auto">
+    <div className="">
       <video
         className="absolute top-0 left-0 w-full h-full object-cover"
         autoPlay
@@ -15,9 +17,9 @@ const BookBanner = () => {
         Your browser does not support the video tag.
       </video>
       <div className="absolute inset-0 bg-black bg-opacity-30"></div>
-
+      </div>
       {/* Content */}
-      <div className="relative z-10 flex flex-col h-full text-white px-6">
+      <div className="relative z-10 flex flex-col h-full text-white ">
         <h1 className="text-4xl md:text-6xl font-bold mb-4">
           Explore the World
         </h1>
@@ -38,6 +40,7 @@ const BookBanner = () => {
         <CheckInOut/>
       </div>
     </div>
+   </section>
   );
 };
 
