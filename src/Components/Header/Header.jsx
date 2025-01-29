@@ -67,16 +67,6 @@ const Header = () => {
             </div>
           
             <div className="flex items-center">
-              <FaHeart className="text-white text-[12px] mr-2" />
-              <a
-                href="#"
-                className="font-open-sans font-medium text-white text-[12px] hover:underline"
-              >
-                Wishlist
-              </a>
-            </div>
-
-            <div className="flex items-center">
               <FaBook className="text-white text-[12px] mr-2" />
               <a
                 href="#"
