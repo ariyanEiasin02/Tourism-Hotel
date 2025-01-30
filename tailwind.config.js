@@ -29,6 +29,9 @@ export default {
       letterSpacing:{
         "ex-tracking-widest" : "2rem"
       },
+      boxShadow:{
+        'soft': '0px 25px 50px 12px rgba(0,0,0,0.3)'
+      }
     },
   },
   plugins: [],
