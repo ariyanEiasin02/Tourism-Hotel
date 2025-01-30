@@ -171,7 +171,8 @@ const ExploreHotes = () => {
                   <div class="group bg-white rounded-lg shadow-lg overflow-hidden">
                     <div className="relative overflow-hidden">
                       <Link to="/TourDetails">
-                        
+                         {console.log(explore)
+                         }
                         <img
                           src={explore.exploreImages}
                           alt="Hotel"
