@@ -10,6 +10,7 @@ import BookNow from "./Pages/BookNow/BookNow";
 import BackToTop from './Components/BackToTop/BackToTop';
 import Navbar from './Components/Navbar/Navbar';
 import Header from './Components/Header/Header';
+import HotelList from './Pages/HotelList/HotelList';
 function App() {
  
   return (
@@ -23,6 +24,7 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/booknow" element={<BookNow />} />
+        <Route path="/hotelList" element={<HotelList /> }/>
       </Routes>
       <Footer/>
     </Router>

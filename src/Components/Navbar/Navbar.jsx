@@ -16,8 +16,8 @@ const Navbar = () => {
     return (
         <>
             <nav className={`py-3 shadow-md ${scroll ? "fixed top-0 left-0 w-full bg-[#20A9A9] z-50":""}`}>
-                <div className="max-w-container mx-auto px-4 md:px-0">
-                    <div className="flex justify-between items-center">
+                <div className="px-4 mx-auto max-w-container md:px-0">
+                    <div className="flex items-center justify-between">
                         <div className="">
                             <Link to="/">
                                 <img src={logo} alt="Logo" className='w-12 h-auto' />
@@ -31,12 +31,18 @@ const Navbar = () => {
                                 </Link>
                                 <a to="/Home/About">
                                     <li className={`${scroll ? "text-white hover:text-[#FCC752]" : "text-black hover:text-[#20A9A9]"}  cursor-pointer`}>
-                                    Hotes
+                                    Hotel
                                     </li>
                                 </a>
                                 <a to="/Home/Blog">
                                     <li className={`${scroll ? "text-white hover:text-[#FCC752]" : "text-black hover:text-[#20A9A9]"}  cursor-pointer`}>Special offer</li>
                                 </a>
+                                <Link to="/hotelList">
+                                
+                               
+                                <li className={`${scroll ? "text-white hover:text-[#FCC752]" : "text-black hover:text-[#20A9A9]"}  cursor-pointer`}>HotelList</li>
+                               
+                                </Link>
                                 <a to='/Home/ShopGrid'>
                                     <li className={`${scroll ? "text-white hover:text-[#FCC752]" : "text-black hover:text-[#20A9A9]"}  cursor-pointer`}>Blog</li>
                                 </a>
@@ -46,16 +52,17 @@ const Navbar = () => {
                                 <a to="/Home/Faq/">
                                     <li className={`${scroll ? "text-white hover:text-[#FCC752]" : "text-black hover:text-[#20A9A9]"}  cursor-pointer`}>Contact</li>
                                 </a>
+                               
                             </ul>
                             </div>
-                            <div className="hidden md:flex items-center">
+                            <div className="items-center hidden md:flex">
                                 <input
                                     className="border-2 border-gray-200 w-[300px] h-10 outline-none text-primary font-lato px-3"
                                     type="search"
                                     placeholder="Search"
                                 />
                                 <button className={`${scroll ? "bg-[#FCC752]" : "bg-[#20A9A9]"} p-[10px]`}>
-                                    <IoSearch className="text-white font-semibold text-xl" />
+                                    <IoSearch className="text-xl font-semibold text-white" />
                                 </button>
                             </div>
                             <button
@@ -70,7 +77,7 @@ const Navbar = () => {
                         className={`md:hidden flex flex-col items-start bg-[#20A9A9] shadow-lg absolute left-0 w-full px-4 py-3 gap-y-4 transition-all z-50 ${menuShow ? 'top-[63px] duration-700 ease-in-out' : 'top-[63px] left-[-800px] duration-700 ease-in-out'
                             }`}
                     >
-                        <ul className="flex flex-col gap-y-4 font-playfair font-bold text-base text-primary w-full text-center">
+                        <ul className="flex flex-col w-full text-base font-bold text-center gap-y-4 font-playfair text-primary">
                             <a to="/">
                                 <li className="text-white hover:text-[#FCC752] cursor-pointer">Home</li>
                             </a>
@@ -79,6 +86,9 @@ const Navbar = () => {
                             </a>
                             <a to="/Home/Blog">
                                 <li className="text-white hover:text-[#FCC752] cursor-pointer">Special offer</li>
+                            </a>
+                            <a to="/HotelList">
+                                <li className="text-white hover:text-[#FCC752] cursor-pointer">HotelList</li>
                             </a>
                             <a to='/Home/ShopGrid'>
                                 <li className="text-white hover:text-[#FCC752] cursor-pointer">Blog</li>
@@ -97,7 +107,7 @@ const Navbar = () => {
                                 placeholder="Search"
                             />
                             <button className="bg-[#FCC752] p-[10px]">
-                                <IoSearch className="text-white font-semibold text-xl" />
+                                <IoSearch className="text-xl font-semibold text-white" />
                             </button>
                         </div>
                     </div>

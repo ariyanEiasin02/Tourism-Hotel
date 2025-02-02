@@ -1,0 +1,131 @@
+import React from "react";
+import { useState } from "react";
+// import { FaCalendarAlt } from "react-icons/fa";
+import DatePicker from "react-datepicker";
+import { IoSearch } from "react-icons/io5";
+import { FaPlus } from "react-icons/fa6";
+
+import { FaMinus } from "react-icons/fa6";
+import { IoChevronDown } from "react-icons/io5";
+
+// import { Search } from "lucide-react"; // Search Icon
+
+
+function SearchBar() {
+  const [selected, setSelected] = useState("");
+  const [startDate, setStartDate] = useState(null);
+
+  const [isOpen, setIsOpen] = useState(false);
+  const [adults, setAdults] = useState(1);
+  const [children, setChildren] = useState(0);
+  const [rooms, setRooms] = useState(0);
+  
+  // Function to update counts
+  const updateCount = (type, operation) => {
+    if (type === "adults") {
+      setAdults((prev) => (operation === "increase" ? prev + 1 : Math.max(1, prev - 1)));
+    } else if (type === "children") {
+      setChildren((prev) => (operation === "increase" ? prev + 1 : Math.max(0, prev - 1)));
+    } else if (type === "rooms") {
+      setRooms((prev) => (operation === "increase" ? prev + 1 : Math.max(0, prev - 1)));
+    }
+  };
+  return (
+    <div className="px-4 py-8 bg-red-600 ">
+   
+    <div className="flex flex-col items-center justify-center gap-4 md:flex-row md:px-4">
+      
+      {/* WHERE (Dropdown) */}
+      <div>
+        <label className="block mb-1 font-semibold text-[#E18A85]">WHERE</label>
+        <select
+          className="w-[200px] py-2 text-black bg-white border rounded-md focus:outline-none md:w-[180px] lg:w-[320px] md:py-3 "
+          value={selected}
+          onChange={(e) => setSelected(e.target.value)}
+        >
+          <option value="" disabled>
+            Going To
+          </option>
+          <option value="New York">New York</option>
+          <option value="San Diego">San Diego</option>
+          <option value="San Jose">San Jose</option>
+          <option value="Philadelphia">Philadelphia</option>
+          <option value="Nashville">Nashville</option>
+          <option value="San Francisco">San Francisco</option>
+        </select>
+      </div>
+
+      {/* CHECK-IN & CHECKOUT */}
+      <div>
+        <label className="block mb-1 font-semibold text-[#E18A85]">
+          CHECK-IN & CHECKOUT
+        </label>
+        <div className="relative">
+        <DatePicker
+          selected={startDate}
+          onChange={(date) => setStartDate(date)}
+          dateFormat="MMMM d, yyyy"
+          placeholderText="Check-In & Check-Out"
+          className="w-[200px] py-2 text-black bg-white border rounded-md focus:outline-none md:w-[180px] lg:w-[320px]"
+        />
+        
+      </div>
+      </div>
+
+      {/* GUESTS & ROOMS */}
+      <div>
+        <label className="block mb-1 font-semibold text-[#E18A85]">
+          GUESTS & ROOMS
+        </label>
+      {/* Input Box */}
+      <div
+        className="flex items-center justify-center w-[200px] py-2 text-gray-500 bg-gray-100 border rounded-md cursor-pointer md:w-[160px] md:py-3 lg:w-[200]"
+        onClick={() => setIsOpen(!isOpen)}
+      >
+        {adults} Adults
+        
+        <IoChevronDown  />
+      </div>
+
+      {/* Dropdown Menu */}
+      {isOpen && (
+        <div className="absolute z-10 w-1/3 p-4 mt-2 -mr-10 bg-white border rounded-md shadow-lg lg:w-1/6 md:w-1/4">
+          {[
+            { label: "Adults", count: adults, type: "adults" },
+            { label: "Children", count: children, type: "children" },
+            { label: "Rooms", count: rooms, type: "rooms" }
+          ].map((item) => (
+            <div key={item.type} className="flex items-center justify-between mb-2 ">
+              <button
+                className="p-2 text-red-600 border rounded-md disabled:opacity-50"
+                onClick={() => updateCount(item.type, "decrease")}
+                disabled={item.type === "adults" && item.count === 1}
+              >
+                <FaMinus className="w-2 h-2" />
+              </button>
+              <span className="text-xs text-red-800 md:text-sm">{item.count} {item.label}</span>
+              <button
+                className="p-2 text-red-600 border rounded-md hover:bg-red-100"
+                onClick={() => updateCount(item.type, "increase")}
+              >
+                <FaPlus className="w-2 h-2" />
+              </button>
+            </div>
+          ))}
+        </div>
+      )}
+      </div>
+
+      {/* SEARCH BUTTON */}
+      <div className="flex items-end">
+        <button className="flex items-center justify-center gap-2 p-2 mt-6 font-semibold text-red-600 bg-white px-6 md:py-3 rounded-md hover:bg-[#0E1E2B] hover:text-white transition-all duration-1000 ease-linear w-[120px]">
+          <IoSearch  /> Search
+        </button>
+      </div>
+    </div>
+  </div>
+   );
+  
+}
+
+export default SearchBar;
