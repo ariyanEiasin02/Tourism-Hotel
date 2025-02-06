@@ -1,5 +1,6 @@
 import React from "react";
 import { useState } from "react";
+
 // import { FaCalendarAlt } from "react-icons/fa";
 import DatePicker from "react-datepicker";
 import { IoSearch } from "react-icons/io5";
@@ -30,16 +31,17 @@ function SearchBar() {
       setRooms((prev) => (operation === "increase" ? prev + 1 : Math.max(0, prev - 1)));
     }
   };
+  
   return (
-    <div className="px-4 py-8 bg-red-600 ">
+    <div className="px-4 py-8 bg-red-600 lg:px-12">
    
-    <div className="flex flex-col items-center justify-center gap-4 md:flex-row md:px-4">
+    <div className="grid items-center grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-4 justify-center">
       
       {/* WHERE (Dropdown) */}
       <div>
         <label className="block mb-1 font-semibold text-[#E18A85]">WHERE</label>
         <select
-          className="w-[200px] py-2 text-black bg-white border rounded-md focus:outline-none md:w-[180px] lg:w-[320px] md:py-3 "
+          className="w-full mx-auto bg-white sm:w-[80%] lg:w-[300px] h-[70px] rounded-md focus:outline-none px-4"
           value={selected}
           onChange={(e) => setSelected(e.target.value)}
         >
@@ -56,17 +58,17 @@ function SearchBar() {
       </div>
 
       {/* CHECK-IN & CHECKOUT */}
-      <div>
-        <label className="block mb-1 font-semibold text-[#E18A85]">
+      <div className="">
+        <label className="block mb-1 font-semibold text-[#E18A85] ">
           CHECK-IN & CHECKOUT
         </label>
-        <div className="relative">
+        <div className="relative w-full mx-auto bg-white sm:w-[80%] lg:w-[300px] h-[70px] rounded-md flex items-center justify-start">
         <DatePicker
           selected={startDate}
           onChange={(date) => setStartDate(date)}
           dateFormat="MMMM d, yyyy"
           placeholderText="Check-In & Check-Out"
-          className="w-[200px] py-2 text-black bg-white border rounded-md focus:outline-none md:w-[180px] lg:w-[320px]"
+          className="focus:outline-none"
         />
         
       </div>
@@ -79,25 +81,25 @@ function SearchBar() {
         </label>
       {/* Input Box */}
       <div
-        className="flex items-center justify-center w-[200px] py-2 text-gray-500 bg-gray-100 border rounded-md cursor-pointer md:w-[160px] md:py-3 lg:w-[200]"
+        className="w-full bg-white sm:w-[90%] lg:w-[300px] h-[70px] rounded-md px-4 py-4 flex items-center justify-between "
         onClick={() => setIsOpen(!isOpen)}
       >
-        {adults} Adults
+        {adults} Adults, {children} Children, {rooms} Rooms
         
         <IoChevronDown  />
       </div>
 
       {/* Dropdown Menu */}
       {isOpen && (
-        <div className="absolute z-10 w-1/3 p-4 mt-2 -mr-10 bg-white border rounded-md shadow-lg lg:w-1/6 md:w-1/4">
+        <div className="absolute z-10 mt-2 bg-white rounded-md w-[95%] px-10 py-6 space-y-5 sm:w-[25%] text-lg">
           {[
             { label: "Adults", count: adults, type: "adults" },
             { label: "Children", count: children, type: "children" },
             { label: "Rooms", count: rooms, type: "rooms" }
           ].map((item) => (
-            <div key={item.type} className="flex items-center justify-between mb-2 ">
+            <div key={item.type} className="flex items-center justify-around mb-2 ">
               <button
-                className="p-2 text-red-600 border rounded-md disabled:opacity-50"
+                className="w-6 h-6 p-2 text-red-600 border rounded-md disabled:opacity-50 "
                 onClick={() => updateCount(item.type, "decrease")}
                 disabled={item.type === "adults" && item.count === 1}
               >
@@ -105,7 +107,7 @@ function SearchBar() {
               </button>
               <span className="text-xs text-red-800 md:text-sm">{item.count} {item.label}</span>
               <button
-                className="p-2 text-red-600 border rounded-md hover:bg-red-100"
+                className="w-6 h-6 p-2 text-red-600 border rounded-md hover:bg-red-100"
                 onClick={() => updateCount(item.type, "increase")}
               >
                 <FaPlus className="w-2 h-2" />
@@ -118,8 +120,8 @@ function SearchBar() {
 
       {/* SEARCH BUTTON */}
       <div className="flex items-end">
-        <button className="flex items-center justify-center gap-2 p-2 mt-6 font-semibold text-red-600 bg-white px-6 md:py-3 rounded-md hover:bg-[#0E1E2B] hover:text-white transition-all duration-1000 ease-linear w-[120px]">
-          <IoSearch  /> Search
+        <button className="w-full mx-auto bg-white sm:w-[60%]  h-[60px] mt-5 rounded-md flex gap-3 items-center justify-center hover:bg-[#0E1E2B] hover:text-white transition-all duration-1000 ease-linear">
+          <IoSearch className="w-5 h-5" /> <span className="font-semibold">Search</span>
         </button>
       </div>
     </div>
