@@ -18,16 +18,18 @@ import Calendar from "react-calendar";
 import "react-calendar/dist/Calendar.css";
 import { SlCalender } from "react-icons/sl";
 
-const TourDEtailSection2Right = () => {
+const TourDetailSection2Left = () => {
   const [date, setDate] = useState(new Date());
   const [showcal, setShowCal] = useState(true);
+  const [showcal2, setShowCal2] = useState(false);
+
   const [selectRoom, setSelectRoom] = useState(true);
-
-
-
 
   const showcalculator = () => {
     setShowCal(!showcal);
+  };
+  const showcalculator2 = () => {
+    setShowCal2(!showcal2);
   };
 
   return (
@@ -108,7 +110,7 @@ const TourDEtailSection2Right = () => {
           </li>
         </ul>
       </div>
-      <div className="px-5 py-4 shadow-soft rounded-lg">
+      <div className="px-5 my-6 py-5 shadow-soft rounded-lg">
         <h2 className=" border-b-[1px] border-purple-500 pb-1 w-fit text-2xl  font-serif">
           Select your room
         </h2>
@@ -131,7 +133,7 @@ const TourDEtailSection2Right = () => {
           {selectRoom ? (
             <div className="flex flex-col gap-4 md:flex-row w-full">
               <div className="px-5 py-4 shadow-soft rounded-lg bg-purple-100 md:w-[60%]">
-                <div className="flex justify-between">
+                <div className="flex justify-between ">
                   <p>Check In date</p>
                   <p>Check Out date</p>
                 </div>
@@ -139,12 +141,18 @@ const TourDEtailSection2Right = () => {
                   <div>
                     <div className="flex items-center gap-2 font-semibold">
                       <p className="mt-2">{date.toDateString()}</p>
-                      <p onClick={showcalculator} className="flex pt-2">
+                      <p
+                        onClick={() => {
+                          showcalculator();
+                          setShowCal2(!showcal2);
+                        }}
+                        className="flex pt-2"
+                      >
                         <SlCalender />
                       </p>
                     </div>
                     <div
-                      className={`p-4 w-[50%] h-[290px] ${
+                      className={`p-4 absolute w-[70%] h-[290px] ${
                         showcal ? "hidden" : "block"
                       }`}
                     >
@@ -154,13 +162,19 @@ const TourDEtailSection2Right = () => {
                   <div>
                     <div className="flex items-center gap-2 font-semibold">
                       <p className="mt-2">{date.toDateString()}</p>
-                      <p onClick={showcalculator} className="flex pt-2">
+                      <p
+                        onClick={() => {
+                          showcalculator2();
+                          setShowCal(!showcal);
+                        }}
+                        className="flex pt-2"
+                      >
                         <SlCalender />
                       </p>
                     </div>
                     <div
-                      className={`p-4 w-[50%] h-[290px] ${
-                        showcal ? "hidden" : "block"
+                      className={`p-4 left-8 md:right-2 absolute w-[70%] h-[290px] ${
+                        showcal2 ? "block" : " hidden"
                       }`}
                     >
                       <Calendar onChange={setDate} value={date} />
@@ -168,10 +182,15 @@ const TourDEtailSection2Right = () => {
                   </div>
                 </div>
               </div>
-              <div className="px-5 py-4 shadow-soft rounded-lg bg-purple-100 w-[30%]">
+              <div className="px-5 py-4 shadow-soft rounded-lg bg-purple-100 w-full md:w-[60%]">
                 <p className=" opacity-70">Guests</p>
                 <p className="font-semibold text-xl ">1 Guests</p>
                 <p className="text-xs">Adult</p>
+              </div>
+              <div>
+                <button className="bg-purple-700 px-8 py-2 rounded-xl text-white flex  justify-center hover:bg-black ease-in-out duration-700">
+                  Check Avilability
+                </button>
               </div>
             </div>
           ) : (
@@ -197,8 +216,36 @@ const TourDEtailSection2Right = () => {
         </div>
         <div></div>
       </div>
+      <div className="px-5 py-5  shadow-soft rounded-lg my-7">
+        <div>
+          <h2 className=" border-b-2 pb-1 w-fit text-2xl  font-serif">
+            Included/Excluded
+          </h2>
+          <p className="opacity-60 text-[16px]">
+            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+            nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
+            erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
+            et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est.
+            <br />
+            <br />
+            Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum
+            dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing
+            elitr, sed diam nonumy eirmod.
+          </p>
+          <ul className=" list-disc pl-5 opacity-60 text-[16px] pt-5">
+            <li>Buffet breakfast as per the Itinerary</li>
+            <li>Visit eight villages showcasing Polynesian culture</li>
+            <li>Cultural </li>
+            <li>All toll tax, parking, fuel, and driver allowances</li>
+            <li>
+              Comfortable and hygienic vehicle (SUV/Sedan) for sightseeing on
+              all days as per the itinerary.
+            </li>
+          </ul>
+        </div>
+      </div>
     </div>
   );
 };
 
-export default TourDEtailSection2Right;
+export default TourDetailSection2Left;
