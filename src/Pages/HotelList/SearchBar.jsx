@@ -1,15 +1,10 @@
 import React from "react";
 import { useState } from "react";
-
-// import { FaCalendarAlt } from "react-icons/fa";
 import DatePicker from "react-datepicker";
 import { IoSearch } from "react-icons/io5";
 import { FaPlus } from "react-icons/fa6";
-
 import { FaMinus } from "react-icons/fa6";
 import { IoChevronDown } from "react-icons/io5";
-
-// import { Search } from "lucide-react"; // Search Icon
 
 
 function SearchBar() {
@@ -35,13 +30,13 @@ function SearchBar() {
   return (
     <div className="px-4 py-8 bg-red-600 lg:px-12">
    
-    <div className="grid items-center grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-4 justify-center">
+    <div className="grid items-center justify-center grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-4">
       
       {/* WHERE (Dropdown) */}
       <div>
         <label className="block mb-1 font-semibold text-[#E18A85]">WHERE</label>
         <select
-          className="w-full mx-auto bg-white sm:w-[80%] lg:w-[300px] h-[70px] rounded-md focus:outline-none px-4"
+          className="w-full mx-auto bg-white sm:w-[80%] lg:w-[300px] h-[70px] rounded-md focus:outline-none px-4 "
           value={selected}
           onChange={(e) => setSelected(e.target.value)}
         >
@@ -103,14 +98,14 @@ function SearchBar() {
                 onClick={() => updateCount(item.type, "decrease")}
                 disabled={item.type === "adults" && item.count === 1}
               >
-                <FaMinus className="w-2 h-2" />
+                <FaMinus className="w-3 h-3" />
               </button>
               <span className="text-xs text-red-800 md:text-sm">{item.count} {item.label}</span>
               <button
                 className="w-6 h-6 p-2 text-red-600 border rounded-md hover:bg-red-100"
                 onClick={() => updateCount(item.type, "increase")}
               >
-                <FaPlus className="w-2 h-2" />
+                <FaPlus className="w-3 h-3 " />
               </button>
             </div>
           ))}
