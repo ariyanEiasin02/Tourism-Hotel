@@ -30,13 +30,13 @@ function SearchBar() {
   return (
     <div className="px-4 py-8 bg-red-600 lg:px-12">
    
-    <div className="grid items-center justify-center grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-4">
+    <div className="grid items-center justify-center grid-cols-1 gap-4 px-2 md:grid-cols-2 lg:grid-cols-4">
       
       {/* WHERE (Dropdown) */}
       <div>
         <label className="block mb-1 font-semibold text-[#E18A85]">WHERE</label>
         <select
-          className="w-full mx-auto bg-white sm:w-[80%] lg:w-[300px] h-[70px] rounded-md focus:outline-none px-4 "
+          className="w-full mx-auto bg-white sm:w-[80%] lg:w-[300px] h-[70px] rounded-md focus:outline-none px-2 "
           value={selected}
           onChange={(e) => setSelected(e.target.value)}
         >

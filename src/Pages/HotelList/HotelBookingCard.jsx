@@ -31,10 +31,10 @@ const HotelBookingCard = () => {
 
       <div className="flex flex-col gap-2 lg:flex-row w-[100%] ">
         <div className="w-[100%] lg:w-[33%]">
-          <div className="flex flex-col p-4 mb-5 bg-gray-100 rounded-lg ">
+          <div className="flex flex-col p-4 mb-5 rounded-lg ">
             
             {/* Left - Filters Section-top */}
-            <div className="flex items-start justify-between mt-6 md:mt-16">
+            <div className="flex items-start justify-between p-4 mt-2 bg-gray-100 md:mt-16">
               <div>
                 <h2 className="text-lg font-semibold text-[#05264E]">
                   Filters
