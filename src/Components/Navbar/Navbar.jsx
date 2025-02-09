@@ -43,6 +43,13 @@ const Navbar = () => {
                                 <li className={`${scroll ? "text-white hover:text-[#FCC752]" : "text-black hover:text-[#20A9A9]"}  cursor-pointer`}>HotelList</li>
                                
                                 </Link>
+                                {/* form aklima-akter branch */}
+                                <Link to="/hotelView">
+                                
+                               
+                                <li className={`${scroll ? "text-white hover:text-[#FCC752]" : "text-black hover:text-[#20A9A9]"}  cursor-pointer`}>HotelView</li>
+                               
+                                </Link>
                                 <a to='/Home/ShopGrid'>
                                     <li className={`${scroll ? "text-white hover:text-[#FCC752]" : "text-black hover:text-[#20A9A9]"}  cursor-pointer`}>Blog</li>
                                 </a>
