@@ -41,7 +41,7 @@ function HotelCard() {
             </div>
         </div>
         <div className='flex flex-col px-2 mt-3'>
-            <p className='text-[#8B3EEA] text-lg font-semibold mb-3 lg:text-lg' >$1200.00/ <span className='text-sm'>Per night</span></p>
+            <p className='text-[#8B3EEA] text-lg font-semibold mb-3 lg:text-lg text-left px-5' >$1200.00/ <span className='text-sm'>Per night</span></p>
             <select className='p-2 border-1 focus:border-teal-200 w-[90%]' name="" id="">
                 <option value="">1</option>
                 <option value="">2</option>

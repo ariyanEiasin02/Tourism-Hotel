@@ -4,6 +4,7 @@ import HotelCastle from './HotelCastle'
 import ImageGallery from './ImageGallery';
 import OverView from './OverView';
 import HotelCard from './HotelCard';
+import Included from './Included';
 // import SelectRoom from './SelectRoom';
 
 function HotelView() {
@@ -15,6 +16,7 @@ function HotelView() {
       <OverView/>
       {/* <SelectRoom/> */}
       <HotelCard/>
+      <Included/>
    
     </div>
   )
