@@ -8,6 +8,7 @@ import Included from './Included';
 import Location from './Location';
 import Review from './Review';
 import AllReview from './AllReview';
+import RelatedHotelAll from './RelatedHotelAll';
 
 // import SelectRoom from './SelectRoom';
 
@@ -24,6 +25,7 @@ function HotelView() {
         <Location />
         <Review/>
         <AllReview/>
+        <RelatedHotelAll/>
    
     </div>
   )
