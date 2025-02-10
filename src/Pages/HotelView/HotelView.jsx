@@ -6,6 +6,7 @@ import OverView from './OverView';
 import HotelCard from './HotelCard';
 import Included from './Included';
 import Location from './Location';
+import Review from './Review';
 
 // import SelectRoom from './SelectRoom';
 
@@ -20,6 +21,7 @@ function HotelView() {
       <HotelCard/>
       <Included/>
         <Location />
+        <Review/>
    
     </div>
   )
