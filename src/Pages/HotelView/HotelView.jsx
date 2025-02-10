@@ -3,6 +3,8 @@ import TopBanner from './TopBanner'
 import HotelCastle from './HotelCastle'
 import ImageGallery from './ImageGallery';
 import OverView from './OverView';
+import HotelCard from './HotelCard';
+// import SelectRoom from './SelectRoom';
 
 function HotelView() {
   return (
@@ -11,6 +13,9 @@ function HotelView() {
       <HotelCastle/>
       <ImageGallery/>
       <OverView/>
+      {/* <SelectRoom/> */}
+      <HotelCard/>
+   
     </div>
   )
 }
