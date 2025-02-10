@@ -22,6 +22,8 @@ function SingleReview(props) {
         </div>
         <h2 className='text-[#212529] text-lg md:text-xl font-semibold text-center mt-3'>{props.name}</h2>
         <p className='text-[#A8A8A8] mt-3 text-center'>" Loved the overall tour for all 6 days covering jaipur jodhpur and jaisalmer. worth ur money for sure. thanks. Driver was very good and polite and safe driving for all 6 days. on time pickup and drop overall. Thanks for it. "</p>
+
+      
         </div>
     
       
