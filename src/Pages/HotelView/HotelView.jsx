@@ -11,6 +11,7 @@ import AllReview from './AllReview';
 import RelatedHotelAll from './RelatedHotelAll';
 import Newsletter from './Newsletter';
 import PriceCard from './PriceCard';
+import WhyChooseUs from './WhyChooseUs';
 
 // import SelectRoom from './SelectRoom';
 
@@ -33,6 +34,7 @@ function HotelView() {
       {/* right-part */}
       <div>
         <PriceCard/>
+        <WhyChooseUs/>
       </div>
    </div>
     
