@@ -4,8 +4,8 @@ import { HiOutlineMailOpen } from "react-icons/hi";
 function Newsletter() {
   return (
     <section className='py-20'>
-    <div className='container px-4 md:px-8 '>
-        <div className='flex flex-col justify-between w-full lg:flex-row'>
+    <div className='container px-4 md:px-8 w-[100%] '>
+        <div className='flex flex-col justify-between lg:flex-row'>
             <div className='flex items-center gap-3'>
             <HiOutlineMailOpen className='w-28 h-28 text-[#8B3EEA]' />
                 <div>
@@ -14,9 +14,15 @@ function Newsletter() {
                 </div>
             </div>
            
-                <div className='mt-10 '>
-                    <input type="text" placeholder='Enter Your Email'className='px-2 py-3 rounded-md pw-full hover:outline-dotted outline-blue-600' />
-                    <button className='bg-[#8B3EEA] px-12 py-3 rounded-md text-white hover:bg-[#212529] transition-all duration-1000 ease-linear font-semibold mr-3 '>Subscribe</button>
+                <div className='flex items-center justify-center mt-10'>
+              <input
+                type="email" placeholder='Enter Your Email'
+                className="h-12 px-3 border-2 border-none rounded-md outline-none hover:border-dotted hover:border-blue-600 w-96 hover:border-r-0"
+              />
+              <button className="h-12 px-6  text-white bg-[#8B3EEA] hover:bg-[#212529] transition-all duration-700 rounded-sm font-semibold  w-40">
+                Sign Up
+              </button>
+
                 </div>
             
         </div>
