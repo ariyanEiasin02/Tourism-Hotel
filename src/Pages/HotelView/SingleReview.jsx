@@ -4,9 +4,9 @@ import { FaStar } from "react-icons/fa6";
 function SingleReview(props) {
   return (
     <section>
-        <div className='container px-4 md:px-8 '>
+        <div className='container px-2 py-4 mx-auto md:px-8'>
       
-        <div className='flex items-end gap-5'>
+        <div className='flex items-end justify-center gap-5'>
             <p>08 Dec, 2021</p>
         <img src={props.image} alt="" />
         <div className='flex flex-col items-center'>

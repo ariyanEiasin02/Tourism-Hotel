@@ -1,8 +1,8 @@
 import React from 'react'
 
-function Review() {
+function WriteReview() {
   return (
-    <section>
+    <section className='w-full md:w-[65%]'>
     <div className='container px-4 md:px-8 '>
    <div className='px-5 py-5 border-2 rounded-xl'>
    <h3 className='text-xl font-semibold text-[#21253D] border-b-2 w-fit pb-1 border-[#8B3EEA]'>Write your review</h3>
@@ -28,4 +28,4 @@ function Review() {
   )
 }
 
-export default Review
+export default WriteReview

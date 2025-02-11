@@ -6,12 +6,12 @@ import OverView from './OverView';
 import HotelCard from './HotelCard';
 import Included from './Included';
 import HotelLocation from './HotelLocation';
-import Review from './Review';
 import AllReview from './AllReview';
 import RelatedHotelAll from './RelatedHotelAll';
 import Newsletter from './Newsletter';
 import PriceCard from './PriceCard';
 import WhyChooseUs from './WhyChooseUs';
+import WriteReview from './WriteReview';
 
 // import SelectRoom from './SelectRoom';
 
@@ -38,7 +38,7 @@ function HotelView() {
       </div>
    </div>
     
-        <Review/>
+        <WriteReview/>
         <AllReview/>
         <RelatedHotelAll/>
         <Newsletter/>
