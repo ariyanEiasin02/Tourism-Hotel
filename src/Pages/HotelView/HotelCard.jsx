@@ -23,7 +23,7 @@ function HotelCard() {
     ]
   return (
     <section className='mt-10'>
-      <div className='container px-6 md:px-8  w-[100%]  md:w-[70%] '>
+      <div className='container px-6 md:px-8 '>
       {
         cardInfo.map((cardInfo,index)=>(
             <div key={index} className='flex flex-col pb-5 mb-5 border-2 md:mb-8 md:items-center md:gap-6 lg:flex-row'>

@@ -13,7 +13,7 @@ function ImageGallery() {
   };
   return (
     
-    <div className="w-full slider-container md:w-[65%] px-4 md:px-8 lg:px-10 mb-10 mt-10">
+    <div className="px-4 mt-10 mb-10  slider-container md:px-8 lg:px-10">
          <img className='mb-5 rounded-lg' src="hotel-big-1.png" alt="" />
       <Slider {...settings}>
         

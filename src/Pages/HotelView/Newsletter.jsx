@@ -4,7 +4,7 @@ import { HiOutlineMailOpen } from "react-icons/hi";
 function Newsletter() {
   return (
     <section className='py-20'>
-    <div className='container px-4 md:px-8  w-[100%] '>
+    <div className='container px-4 md:px-8 '>
         <div className='flex flex-col justify-between w-full lg:flex-row'>
             <div className='flex items-center gap-3'>
             <HiOutlineMailOpen className='w-28 h-28 text-[#8B3EEA]' />

@@ -2,10 +2,10 @@ import React from 'react'
 import { FaStar } from "react-icons/fa6";
 import { MdOutlineDirectionsRun } from "react-icons/md";
 
-function Location() {
+function HotelLocation() {
   return (
-    <section className='mt-5'>
-    <div className='container px-4 md:px-8  w-[100%] md:w-[70%] '>
+    <section className='mt-10 mb-10'>
+    <div className='container px-4 md:px-8 '>
    <div className='px-5 py-5 border-2 rounded-xl'>
    <h3 className='text-xl font-semibold text-[#21253D] border-b-2 w-fit pb-1 border-[#8B3EEA] mb-5'>Hotel location</h3>
     
@@ -50,4 +50,4 @@ function Location() {
   )
 }
 
-export default Location
+export default HotelLocation

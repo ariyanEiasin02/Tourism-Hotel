@@ -5,25 +5,37 @@ import ImageGallery from './ImageGallery';
 import OverView from './OverView';
 import HotelCard from './HotelCard';
 import Included from './Included';
-import Location from './Location';
+import HotelLocation from './HotelLocation';
 import Review from './Review';
 import AllReview from './AllReview';
 import RelatedHotelAll from './RelatedHotelAll';
 import Newsletter from './Newsletter';
+import PriceCard from './PriceCard';
 
 // import SelectRoom from './SelectRoom';
 
 function HotelView() {
   return (
-    <div>
+    <div className='w-[100%]'> 
       <TopBanner/>
+
+   <div className='flex flex-col md:flex-row'>
+    {/* left-part */}
+   <div className='w-full md:w-[65%]'>
       <HotelCastle/>
       <ImageGallery/>
       <OverView/>
       {/* <SelectRoom/> */}
       <HotelCard/>
       <Included/>
-        <Location />
+        <HotelLocation />
+      </div>
+      {/* right-part */}
+      <div>
+        <PriceCard/>
+      </div>
+   </div>
+    
         <Review/>
         <AllReview/>
         <RelatedHotelAll/>
