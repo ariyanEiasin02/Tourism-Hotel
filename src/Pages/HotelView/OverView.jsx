@@ -3,7 +3,7 @@ import SectionPoint from './SectionPoint'
 
 function OverView() {
   return (
-    <section>
+    <section className=''>
         <div className='container px-4 md:px-8 '>
       <div className='px-5 py-5 border-2 rounded-xl'>
       <h3 className='text-xl font-semibold text-[#21253D] border-b-2 w-28 pb-1 border-[#8B3EEA]'>Overview</h3>

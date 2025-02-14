@@ -14,10 +14,10 @@ function Newsletter() {
                 </div>
             </div>
            
-                <div className='flex items-center justify-center mt-10'>
+                <div className='flex items-center justify-center mt-10 '>
               <input
                 type="email" placeholder='Enter Your Email'
-                className="h-12 px-3 border-2 border-none rounded-md outline-none hover:border-dotted hover:border-blue-600 w-96 hover:border-r-0"
+                className="h-12 px-3 overflow-hidden border-2 border-none rounded-md outline-none hover:border-dotted hover:border-blue-600 w-96 hover:border-r-0"
               />
               <button className="h-12 px-6  text-white bg-[#8B3EEA] hover:bg-[#212529] transition-all duration-700 rounded-sm font-semibold  w-40">
                 Sign Up

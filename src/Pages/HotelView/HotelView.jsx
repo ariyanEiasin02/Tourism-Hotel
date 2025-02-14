@@ -14,6 +14,8 @@ import WhyChooseUs from './WhyChooseUs';
 import WriteReview from './WriteReview';
 
 // import SelectRoom from './SelectRoom';
+// import BookRoom from './BookRoom';
+import BookEnquiryRoom from './BookEnquiryRoom';
 
 function HotelView() {
   return (
@@ -22,11 +24,13 @@ function HotelView() {
 
    <div className='flex flex-col md:flex-row'>
     {/* left-part */}
-   <div className='w-full md:w-[65%]'>
+   <div className='w-full md:w-[70%]'>
       <HotelCastle/>
       <ImageGallery/>
       <OverView/>
       {/* <SelectRoom/> */}
+      {/* <BookRoom/> */}
+      <BookEnquiryRoom />
       <HotelCard/>
       <Included/>
         <HotelLocation />
@@ -38,7 +42,7 @@ function HotelView() {
       </div>
    </div>
     
-        <WriteReview/>
+        <WriteReview className='w-full lg:w-[70%]' btnText = "Post Comment"/>
         <AllReview/>
         <RelatedHotelAll/>
         <Newsletter/>
