@@ -11,6 +11,7 @@ import BackToTop from './Components/BackToTop/BackToTop';
 import Navbar from './Components/Navbar/Navbar';
 import Header from './Components/Header/Header';
 import HotelList from './Pages/HotelList/HotelList';
+import HotelView from './Pages/HotelView/HotelView';
 function App() {
  
   return (
@@ -25,6 +26,7 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/booknow" element={<BookNow />} />
         <Route path="/hotelList" element={<HotelList /> }/>
+        <Route path="/hotelView" element={<HotelView/> }/>
       </Routes>
       <Footer/>
     </Router>

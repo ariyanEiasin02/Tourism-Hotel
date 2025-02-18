@@ -54,7 +54,7 @@ function SearchBar() {
 
       {/* CHECK-IN & CHECKOUT */}
       <div className="">
-        <label className="block mb-1 font-semibold text-[#E18A85] ">
+        <label className="block mb-1 font-semibold text-[#B1ADBD] ">
           CHECK-IN & CHECKOUT
         </label>
         <div className="relative w-full mx-auto bg-white sm:w-[80%] lg:w-[300px] h-[70px] rounded-md flex items-center justify-start">
